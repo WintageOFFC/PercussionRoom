@@ -1,0 +1,5 @@
+C:/Users/vavny/Documents/Unity Projacts/VR_Test/.utmp/RelWithDebInfo/5wp1m4e4/arm64-v8a/CMakeFiles/edit_cache.dir
+C:/Users/vavny/Documents/Unity Projacts/VR_Test/.utmp/RelWithDebInfo/5wp1m4e4/arm64-v8a/CMakeFiles/rebuild_cache.dir
+C:/Users/vavny/Documents/Unity Projacts/VR_Test/.utmp/RelWithDebInfo/5wp1m4e4/arm64-v8a/GameActivity/CMakeFiles/game.dir
+C:/Users/vavny/Documents/Unity Projacts/VR_Test/.utmp/RelWithDebInfo/5wp1m4e4/arm64-v8a/GameActivity/CMakeFiles/edit_cache.dir
+C:/Users/vavny/Documents/Unity Projacts/VR_Test/.utmp/RelWithDebInfo/5wp1m4e4/arm64-v8a/GameActivity/CMakeFiles/rebuild_cache.dir
