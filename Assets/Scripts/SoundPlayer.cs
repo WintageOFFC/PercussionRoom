@@ -3,6 +3,9 @@ using UnityEngine.Audio;
 using System.Collections;
 using System.Collections.Generic;
 
+/// <summary>
+/// Plays one-shot audio clips with fade-out handling when the same sound is triggered again.
+/// </summary>
 public class SoundPlayer : MonoBehaviour
 {
     [SerializeField] private float lifetime = 4f;
@@ -11,6 +14,10 @@ public class SoundPlayer : MonoBehaviour
 
     private Dictionary<AudioClip, GameObject> activeSounds = new Dictionary<AudioClip, GameObject>();
 
+    /// <summary>
+    /// Plays a one-shot audio clip. If the same clip is already playing, it fades out and is replaced.
+    /// </summary>
+    /// <param name="clip">The audio clip to play.</param>
     public void PlayOneShot(AudioClip clip)
     {
         if (clip == null) return;
@@ -33,6 +40,10 @@ public class SoundPlayer : MonoBehaviour
         Destroy(audioObj, lifetime);
     }
 
+    /// <summary>
+    /// Coroutine that fades out the audio source volume and destroys the object.
+    /// </summary>
+    /// <param name="audioObj">The GameObject with an AudioSource to fade and destroy.</param>
     private IEnumerator FadeOutAndDestroy(GameObject audioObj)
     {
         if (audioObj == null) yield break;
@@ -45,7 +56,7 @@ public class SoundPlayer : MonoBehaviour
 
         while (t < fadeOutDuration)
         {
-            if (source == null) yield break; // <== дополнительная проверка на уничтожение
+            if (source == null) yield break;
 
             t += Time.deltaTime;
             float normalized = t / fadeOutDuration;
